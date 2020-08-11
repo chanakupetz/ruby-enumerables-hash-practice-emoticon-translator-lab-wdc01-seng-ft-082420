@@ -18,7 +18,7 @@ def get_japanese_emoticon
 end
 
 def get_english_meaning(file_path, emoticon)
-  emoticons = YAML.load_file('./lib/emoticons.yml')
+  emoticon = YAML.load_file('./lib/emoticons.yml')
  load_library(file_path)
 
   emoticon.each do |key, emoticon_pairs|
