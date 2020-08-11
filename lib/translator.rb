@@ -22,7 +22,7 @@ def get_english_meaning(file_path, emoticon)
  load_library(file_path)
 
   emoticon.each do |key, emoticon_pairs|
-    if emoricon_pairs[1] == japanese_emoticon
+    if emoticon_pairs[1] == japanese_emoticon
       return key
     end
 end
