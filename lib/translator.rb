@@ -22,9 +22,9 @@ def get_english_meaning(file_path, emoticon)
   emoticon.each do |key, emoticon_pairs|
     if emoricon_pairs[1] == japanese_emoticon
       return key
-      
+
     end
-  
+
 end
 
 
@@ -39,4 +39,3 @@ def get_english_meaning(file_path, japanese_emoticon)
  end
 
  end
-
