@@ -16,7 +16,8 @@ end
 def get_japanese_emoticon(file_path, english_emoticon)
   emoticon = YAML.load_file('./lib/emoticons.yml')
  load_library(file_path)
-
+emoticon_pair_arrays = emoticon.values
+binding.pry
  emoticon.each do |emoticon_pairs|
    if emoticon_pairs[0] == english_emoticon
      return emoticon_pairs[1]
