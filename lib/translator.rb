@@ -17,27 +17,14 @@ def get_japanese_emoticon(file_path, english_emoticon)
   emoticon = YAML.load_file('./lib/emoticons.yml')
  load_library(file_path)
 emoticon_pair_arrays = emoticon.values
- emoticon.each do |emoticon_pairs|
-   if emoticon_pairs[0] == english_emoticon
-     return emoticon_pairs[1]
-     binding.pry
-
+ emoticon_pair_arrays.each do |pair_array|
+   if pair_array[0] == english_emoticon
+     return pair_array[1]
    end
 end
 return "Sorry, that emoticon was not found"
 end
 
-#def get_japanese_emoticon(file_path, english_emoticon)
-#  emoticons = YAML.load_file('./lib/emoticons.yml')
-#  load_library(file_path)
-  #emoticon_pair_arrays = emoticons.values
-
-  #emoticon_pair_arrays.each do |pair_array|
-
-   #if pair_array[0] == english_emoticon
-     #return pair_array[1]
-  #  end
-  #end
 
 
 def get_english_meaning(file_path, japanese_emoticon)
