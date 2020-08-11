@@ -17,7 +17,7 @@ def get_japanese_emoticon
   # code goes here
 end
 
-def get_english_meaning(file_path, emoticon)
+def get_english_meaning(file_path, japanese_emoticon)
   emoticon = YAML.load_file('./lib/emoticons.yml')
  load_library(file_path)
 
